@@ -1,0 +1,91 @@
+top\tobject\t{}
+
+list\ttop\t{FIRST: top}
+
+list_data\tlist\t{FIRST: data}
+
+ne_list\tlist\t{REST: list}
+
+ne_list_data\tne_list\t{REST: list_data}
+
+e_list\tlist\t{FIRST: null}
+
+ne_list_1\tne_list\t{REST: e_list}
+
+ne_list_1_t\tne_list_1\t{FIRST: terminal}
+
+ne_list_1_nt\tne_list_1\t{FIRST: nonterminal}
+
+ne_list_n1\tne_list\t{}
+
+ne_list_2\tne_list_n1\t{REST: ne_list_1}
+
+ne_list_2_t\tne_list_2\t{FIRST: terminal}
+
+ne_list_2_t_t\tne_list_2_t\t{REST: {FIRST: terminal}}
+
+ne_list_2_t_nt\tne_list_2_t\t{REST: {FIRST: nonterminal}}
+
+ne_list_2_nt\tne_list_2\t{FIRST: nonterminal}
+
+ne_list_2_nt_t\tne_list_2_nt\t{REST: {FIRST: terminal}}
+
+ne_list_2_nt_nt\tne_list_2_nt\t{REST: {FIRST: nonterminal}}
+
+ne_list_n2\tne_list_n1\t{}
+
+ne_list_3\tne_list_n2\t{REST: ne_list_2}
+
+ne_list_3_t\tne_list_3\t{FIRST: terminal}
+
+ne_list_3_t_t\tne_list_3_t\t{REST: {FIRST: terminal}}
+
+ne_list_3_t_t_t\tne_list_3_t_t\t{REST: {REST: {FIRST: terminal}}}
+
+ne_list_3_t_t_nt\tne_list_3_t_t\t{REST: {REST: {FIRST: nonterminal}}}
+
+ne_list_3_t_nt\tne_list_3_t\t{REST: {FIRST: nonterminal}}
+
+ne_list_3_t_nt_t\tne_list_3_t_nt\t{REST: {REST: {FIRST: terminal}}}
+
+ne_list_3_t_nt_nt\tne_list_3_t_nt\t{REST: {REST: {FIRST: terminal}}}
+
+ne_list_3_nt\tne_list_3\t{FIRST: nonterminal}
+
+ne_list_3_nt_t\tne_list_3_nt\t{REST: {FIRST: terminal}}
+
+ne_list_3_nt_t_t\tne_list_3_nt_t\t{REST: {REST: {FIRST: terminal}}
+
+ne_list_3_nt_t_nt\tne_list_3_nt_t\t{REST: {REST: {FIRST: nonterminal}}
+
+ne_list_3_nt_nt\tne_list_3_nt\t{REST: {FIRST: nonterminal}
+
+ne_list_3_nt_nt_t\tne_list_3_nt_nt\t{REST: {REST: {FIRST: terminal}}
+
+ne_list_3_nt_nt_nt\tne_list_3_nt_nt\t{REST: {REST: {FIRST: nonterminal}}
+
+ne_list_n3\tne_list_n2\t{}
+
+production\ttop\t{LHS: ne_list_data, RHS: list_data}
+
+production_hc\tproduction\t{LHS: ne_list_1_nt}
+
+production_hc_empty\tproduction_hc\t{RHS: e_list}
+
+production_hc_nempty\tproduction_hc_nempty\t{RHS: ne_list_data}
+
+production_hc_1\tproduction_hc_nempty\t{RHS: ne_list_1}
+
+production_hc_1_unaire\tproduction_hc_1\t{RHS: ne_list_1_nt}
+
+production_hc_1_lexicale\tproduction_hc_1\t{RHS: ne_list_1_t}
+
+production_hc_2\tproduction_hc_nempty\t{RHS: ne_list_2}
+
+production_hc_2_binaire\tproduction_hc_2\t{RHS: ne_list_2_nt_nt}
+
+data\ttop\t{}
+
+nonterminal\tdata\t{}
+
+terminal\tdata\t{}
